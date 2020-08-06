@@ -51,8 +51,26 @@ nav ul li {
 nav ul li a {
 	text-decoration: none;
 	color: #060709;
+	padding: 10px 20px;
 }
 
+nav ul li a:hover{
+	text-decoration: line-through;
+  animation: strike .5s linear;
+	text-decoration-color: #dd2429;
+}
+
+@keyframes strike {
+  from { text-decoration-color: transparent; }
+  to { text-decoration-color: #dd2429; }
+}
+
+.active {
+	background: url("images/lips.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -40px 75%;
+}
 
 /***** FOOTER *****/
 

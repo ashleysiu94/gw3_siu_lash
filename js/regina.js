@@ -13,3 +13,18 @@ var r_quote2 = [
 var reginaquote = document.getElementById("regina-quote");
 var rand_integer2 = Math.floor(Math.random() * r_quote2.length);
 reginaquote.innerHTML = r_quote2[rand_integer2];
+
+
+// Changing Profile Pic on Hover
+
+document.getElementById("Regina-pic").addEventListener("mouseenter",
+  function() {
+    document.getElementById("Regina-pic").src = "images/Regina_funny.png";
+  }, false
+);
+
+document.getElementById("Regina-pic").addEventListener("mouseleave",
+  function() {
+    document.getElementById("Regina-pic").src = "images/Regina_normal.png";
+  }, false
+);

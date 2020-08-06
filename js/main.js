@@ -13,3 +13,18 @@ var r_quote = [
 var cadyquote = document.getElementById("cady-quote");
 var rand_integer = Math.floor(Math.random() * r_quote.length);
 cadyquote.innerHTML = r_quote[rand_integer];
+
+
+// Changing Profile Pic on Hover
+
+document.getElementById("Cady-pic").addEventListener("mouseenter",
+  function() {
+    document.getElementById("Cady-pic").src = "images/Cady_funny.png";
+  }, false
+);
+
+document.getElementById("Cady-pic").addEventListener("mouseleave",
+  function() {
+    document.getElementById("Cady-pic").src = "images/Cady_normal.png";
+  }, false
+);
