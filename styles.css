@@ -14,19 +14,20 @@ body {
 
 #main-home {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
-	padding: 20px 50px;
+	/* padding: 20px 50px; */
 }
 
-#main-home img {
+/* #main-home img {
 	max-width: 700px;
-}
+} */
 
 h1 {
 	font-family: 'Nanum Pen Script', cursive;
 	text-align: center;
-	font-size: 5rem;
+	font-size: 2rem;
+	max-width: 280px;
 	color: #dd2429;
 	text-decoration: underline;
   animation: strike 5s 1 linear;
@@ -40,11 +41,6 @@ h1 {
   to {
 		text-decoration-color: #dd2429;
 	}
-}
-
-#main-home h1 {
-	max-width: 600px;
-	padding-right: 300px;
 }
 
 header {
@@ -63,27 +59,116 @@ header img {
 	width: 300px;
 }
 
-/***** NAVIGATION *****/
+#desktop-logo {
+	display: none;
+}
 
-nav ul {
+/***** MOBILE NAVIGATION *****/
+
+.nav-icons {
+	width: 70px;
+}
+
+
+.hamburger{
+  background: none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  color:#060709;
+  border:0;
+  font-size:2.5em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:0px;
+  right:0;
+  color:#060709;
+  border:0;
+  font-size:5em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.menu{
+	z-index:1000000;
+	font-weight:bold;
+	width:100%;
+	background: url("images/background.jpg");
+	position:absolute;
+	text-align:center;
+}
+.menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	list-style-image: none;
+}
+.menu li {
+	display: block;
+	line-height: 50px;
+	border-bottom:#f4bfd1 1px solid;
+}
+.menu li:hover{
+	display: block;
+	background:#ffffff;
+	border-bottom:#f4bfd1 1px solid;
+}
+.menu ul li a {
+	text-decoration:none;
+	padding: 10px 20px;
+	margin: 0px;
+	color:#060709;
+}
+.menu ul li a:hover {
+	text-decoration: line-through;
+  animation: strike .5s linear;
+	text-decoration-color: #dd2429;}
+.menu a{
+	text-decoration:none;
+	color:#666;}
+.menu a:hover{
+	text-decoration:none;
+	color:#060709;}
+
+.menu ul li {
+	font-family: 'Acme', sans-serif;
+	font-size: 2rem;
+}
+
+
+/***** DESKTOP NAVIGATION ****/
+.desktop-nav {
+	display: none;
+}
+
+.desktop-nav ul {
 	display: flex;
 	flex-direction: row;
 	list-style-type: none;
 }
 
-nav ul li {
+.desktop-nav ul li {
 	padding: 10px 25px;
 	font-family: 'Acme', sans-serif;
 	font-size: 2rem;
 }
 
-nav ul li a {
+.desktop-nav ul li a {
 	text-decoration: none;
 	color: #060709;
 	padding: 10px 20px;
 }
 
-nav ul li a:hover{
+.desktop-nav ul li a:hover{
 	text-decoration: line-through;
   animation: strike .5s linear;
 	text-decoration-color: #dd2429;
@@ -117,10 +202,8 @@ footer p {
 
 
 /***** BOOK *****/
+/* https://codepen.io/dhanishgajjar/pen/bjaYYo */
 
-#book-position {
-	padding: 20px 20px 50px 0;
-}
 
 .book {
   transform-style: preserve-3d;
@@ -242,7 +325,6 @@ footer p {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	/* justify-content: space-around; */
 	padding: 20px 20px 20px 20px;
 }
 
@@ -350,6 +432,7 @@ article p {
 }
 
 /***** SLIDER ANIMATION *****/
+/* https://www.cssscript.com/polaroid-like-stacked-image-slideshow/ */
 
 .slideshow:hover .slidepic:nth-child(4) {
   -moz-transform: rotate(10deg) translateX(50px);
@@ -394,3 +477,60 @@ article p {
 }
 
 .slidepic.back { z-index: 1; }
+
+/* =======================================================
+
+					START 600PX MIN-WIDTH MEDIA QUERY
+
+========================================================*/
+
+@media (min-width: 600px) {
+	h1 {
+		font-size: 5rem;
+		max-width: none;
+	}
+
+	#main-home {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 20px 50px;
+	}
+
+	#main-home h1 {
+		max-width: 600px;
+		padding-right: 300px;
+	}
+
+	#book-position {
+		padding: 20px 20px 50px 0;
+	}
+
+}
+
+
+/* =======================================================
+
+					START 800PX MIN-WIDTH MEDIA QUERY
+
+========================================================*/
+
+
+@media (min-width: 800px) {
+	.mobile-header-container {
+		display: none;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	#desktop-logo {
+		display: block;
+	}
+
+	.desktop-nav {
+		display: block;
+	}
+
+}

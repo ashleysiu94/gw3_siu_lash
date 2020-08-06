@@ -12,6 +12,9 @@
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Acme&family=Nanum+Pen+Script&family=Roboto&display=swap" rel="stylesheet">
 
+		<!-- JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!--[if lt IE 9]>
@@ -22,8 +25,29 @@
 
 	<body>
 		<header>
+			<!-- Mobile View -->
+			<div class="mobile-header-container">
+				<img id="mobile-logo" src="images/burn_book_logo.png" alt="logo" title="logo"></a>
+
+				<button class="hamburger">
+					<img class="nav-icons" src="images/lipstick.png" alt="lipstick nav" title="lipstick nav">
+				</button>
+				<button class="cross">
+					<img class="nav-icons" src="images/X.png" alt="close nav" title="close nav">
+				</button>
+			</div>
+
+			<nav class="menu">
+				<ul>
+					<li><a class="active" href="index.html">Home</a></li>
+					<li><a href="cady.html">Cady</a></li>
+					<li><a href="regina.html">Regina</a></li>
+				</ul>
+			</nav>
+
+			<!-- Desktop View -->
 			<img src="images/burn_book_logo.png" alt="logo" title="logo">
-			<nav>
+			<nav class="desktop-nav">
 				<ul>
           <li><a href="index.html">Home</a></li>
 					<li><a href="cady.html">Cady</a></li>
@@ -76,6 +100,7 @@
 		</footer>
 
 		<!-- JavaScript -->
+		<script src="js/hamburger.js"></script>
 		<script src="js/regina.js"></script>
     <script src="js/slideshow.js"></script>
 	</body>
