@@ -9,9 +9,16 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	background: url("images/background.jpg");
-	background-repeat: no-repeat;
+	background-size: cover;
 	background-color: #f3bbce;
+}
+
+main {
+	flex: 1;
 }
 
 #main-home {
@@ -189,6 +196,7 @@ header img {
 footer {
 	background-color: #060709;
 	padding: 40px 0;
+	margin-top: auto;
 }
 
 footer p {
@@ -214,9 +222,10 @@ footer p {
 .front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
   transform-style: preserve-3d;
   position: absolute;
-  width: 400px; /*change this */
-  height: 100%; /*change this */
-  top: 0; left: 0;
+	width: 150px; /*change in media query*/
+	height: 40%; /*change in media query*/
+  top: 40px; /*change in media query*/
+	left: -75px; /*change in media query*/
   transform-origin: left center;
   transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
 }
@@ -253,50 +262,54 @@ footer p {
 }
 
 .page5 {
-  background: url("images/cady_screenshot.png");
+  background: url("images/Cady_funny_reverse.png");
+	background-size: cover;
+	background-position: center;
 }
 
 .page6 {
-  background: url("images/regina_screenshot.png");
+  background: url("images/Regina_funny.png");
+	background-size: cover;
+	background-position: center;
 }
 
 .book:hover .front {
-  transform: rotateY(-160deg) scale(1.1);
+  transform: translateX(50%) rotateY(-160deg) scale(1.1);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
 }
 
 .book:hover .page1 {
-  transform: rotateY(-150deg) scale(1.1);
+  transform: translateX(50%) rotateY(-150deg) scale(1.1);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
 }
 
 .book:hover .page2 {
-  transform: rotateY(-30deg) scale(1.1);
+  transform: translateX(50%) rotateY(-30deg) scale(1.1);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
 }
 
 .book:hover .page3 {
-  transform: rotateY(-140deg) scale(1.1);
+  transform: translateX(50%) rotateY(-140deg) scale(1.1);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
 }
 
 .book:hover .page4 {
-  transform: rotateY(-40deg) scale(1.1);
+  transform: translateX(50%) rotateY(-40deg) scale(1.1);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
 }
 
 .book:hover .page5 {
-  transform: rotateY(-130deg) scale(1.1);
+  transform: translateX(50%) rotateY(-130deg) scale(1.1);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
 }
 
 .book:hover .page6 {
-  transform: rotateY(-50deg) scale(1.1);
+  transform: translateX(50%) rotateY(-50deg) scale(1.1);
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
 }
 
 .book:hover .back {
-  transform: rotateY(-20deg) scale(1.1);
+  transform: translateX(50%) rotateY(-20deg) scale(1.1);
 }
 
 
@@ -325,6 +338,7 @@ footer p {
 	font-size: 1.5rem;
 	color: #060709;
 	padding: 20px;
+	margin: 0 auto;
 }
 
 .quote {
@@ -350,6 +364,7 @@ section {
 	display: flex;
 	flex-direction: column-reverse;
 	align-items: center;
+	margin: 0 auto;
 	max-width: 300px;
 	padding-bottom: 20px;
 }
@@ -542,6 +557,13 @@ article p {
 	#cady-headline {
 		max-width: none;
 	}
+
+	.front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+		width: 230px;
+    height: 60%;
+    top: 40px;
+    left: -117px;
+	}
 }
 
 /* =======================================================
@@ -563,27 +585,6 @@ article p {
 ========================================================*/
 
 @media (min-width: 700px) {
-	h1 {
-		font-size: 5rem;
-		max-width: none;
-	}
-
-	#main-home {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		padding: 20px 50px;
-	}
-
-	#main-home h1 {
-		max-width: 600px;
-		padding-right: 300px;
-	}
-
-	#book-position {
-		padding: 20px 20px 50px 0;
-	}
-
 	.mobile-quote {
 		display: none;
 	}
@@ -614,6 +615,13 @@ article p {
 
 
 @media (min-width: 800px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		max-width: 1900px;
+		margin: 0 auto;
+	}
+
 	.mobile-header-container {
 		display: none;
 	}
@@ -630,6 +638,25 @@ article p {
 		display: block;
 	}
 
+	h1 {
+		font-size: 5rem;
+		max-width: none;
+	}
+
+	#main-home {
+		padding: 20px 25px;
+	}
+
+	#main-home h1 {
+		max-width: 600px;
+	}
+
+	.front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+	    width: 355px;
+	    height: 90%;
+	    top: 40px;
+	    left: -175px;
+	}
 	.info {
 		flex-direction: row;
 	}
