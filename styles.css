@@ -67,6 +67,12 @@ header img {
 	display: none;
 }
 
+.mobile-header-container {
+	height: 150px;
+	display: flex;
+	flex-direction: row;
+}
+
 /***** MOBILE NAVIGATION *****/
 
 .nav-icons {
@@ -632,7 +638,7 @@ article p {
 
 	section {
 		flex-direction: column;
-		flex-basis: 40%;
+		flex-basis: 800px;
 		padding: 20px 0;
 	}
 
@@ -657,4 +663,16 @@ article p {
 		font-size: 2rem;
 	}
 
+}
+
+/* =======================================================
+
+					START 1200PX MIN-WIDTH MEDIA QUERY
+
+========================================================*/
+
+@media (min-width: 1200px) {
+	section {
+		flex-basis: 40%;
+	}
 }
