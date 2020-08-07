@@ -14,6 +14,8 @@ var reginaquote = document.getElementById("regina-quote");
 var rand_integer2 = Math.floor(Math.random() * r_quote2.length);
 reginaquote.innerHTML = r_quote2[rand_integer2];
 
+var reginaquote2 = document.getElementById("regina-quote2");
+reginaquote2.innerHTML = r_quote2[rand_integer2];
 
 // Changing Profile Pic on Hover
 

@@ -14,6 +14,8 @@ var cadyquote = document.getElementById("cady-quote");
 var rand_integer = Math.floor(Math.random() * r_quote.length);
 cadyquote.innerHTML = r_quote[rand_integer];
 
+var cadyquote2 = document.getElementById("cady-quote2");
+cadyquote2.innerHTML = r_quote[rand_integer];
 
 // Changing Profile Pic on Hover
 

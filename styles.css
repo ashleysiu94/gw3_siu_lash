@@ -25,7 +25,6 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* padding: 20px 50px; */
 }
 
 h1 {
@@ -365,12 +364,11 @@ section {
 	flex-direction: column-reverse;
 	align-items: center;
 	margin: 0 auto;
-	max-width: 300px;
-	padding-bottom: 20px;
+	padding: 20px 10px;
 }
 
 section img {
-	max-width: 600px;
+	width: 100%;
 }
 
 h2 {
@@ -387,7 +385,7 @@ section ul li {
 }
 
 article {
-	max-width: 700px;
+	max-width: 900px;
 }
 
 article p {
@@ -406,9 +404,8 @@ article p {
 
 /***** SLIDESHOW *****/
 
-
 .slideshow {
-	text-align: center;
+	/* text-align: center; */
   margin-left: 205px;
 }
 
@@ -495,18 +492,18 @@ article p {
   transform: rotate(-8deg) translateX(-75px) translateY(-10px);
 }
 
-.slidepic.slide-right {
-  -moz-transform: rotate(290deg) translateX(250px);
-  -ms-transform: rotate(290deg) translateX(250px);
-  -webkit-transform: rotate(290deg) translateX(250px);
-  transform: rotate(290deg) translateX(250px);
+.slidpic.slide-right {
+  -moz-transform: translateX(250px);
+  -ms-transform: translateX(250px);
+  -webkit-transform: translateX(250px);
+  transform: translateX(250px);
 }
 
 .slidepic.slide-left {
-  -moz-transform: rotate(-290deg) translateX(-250px);
-  -ms-transform: rotate(-290deg) translateX(-250px);
-  -webkit-transform: rotate(-290deg) translateX(-250px);
-  transform: rotate(-290deg) translateX(-250px);
+  -moz-transform: translateX(-250px);
+  -ms-transform: translateX(-250px);
+  -webkit-transform: translateX(-250px);
+  transform: translateX(-250px);
 }
 
 .slidepic.back { z-index: 1; }
@@ -578,34 +575,6 @@ article p {
 	}
 }
 
-/* =======================================================
-
-					START 700PX MIN-WIDTH MEDIA QUERY
-
-========================================================*/
-
-@media (min-width: 700px) {
-	.mobile-quote {
-		display: none;
-	}
-
-	.quote {
-		display: block;
-	}
-
-	.quote p {
-		font-size: 2rem;
-	}
-
-	section {
-		padding-bottom: 0;
-	}
-
-	h2 {
-		font-size: 2rem;
-	}
-}
-
 
 /* =======================================================
 
@@ -659,6 +628,33 @@ article p {
 	}
 	.info {
 		flex-direction: row;
+	}
+
+	section {
+		flex-direction: column;
+		flex-basis: 40%;
+		padding: 20px 0;
+	}
+
+	.right-content {
+		padding: 20px 10px;
+	}
+
+	.mobile-quote {
+		display: none;
+	}
+
+	.quote {
+		display: block;
+		padding: 20px 0;
+	}
+
+	.quote p {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 2rem;
 	}
 
 }
