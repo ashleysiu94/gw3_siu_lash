@@ -10,6 +10,8 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 
 body {
 	background: url("images/background.jpg");
+	background-repeat: no-repeat;
+	background-color: #f3bbce;
 }
 
 #main-home {
@@ -18,10 +20,6 @@ body {
 	align-items: center;
 	/* padding: 20px 50px; */
 }
-
-/* #main-home img {
-	max-width: 700px;
-} */
 
 h1 {
 	font-family: 'Nanum Pen Script', cursive;
@@ -59,7 +57,7 @@ header img {
 	width: 300px;
 }
 
-#desktop-logo {
+.desktop-logo {
 	display: none;
 }
 
@@ -216,8 +214,8 @@ footer p {
 .front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
   transform-style: preserve-3d;
   position: absolute;
-  width: 400px;
-  height: 100%;
+  width: 400px; /*change this */
+  height: 100%; /*change this */
   top: 0; left: 0;
   transform-origin: left center;
   transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
@@ -307,32 +305,53 @@ footer p {
 .character-main {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	padding-bottom: 50px;
 }
 
+#regina-headline {
+	max-width: 200px;
+}
+
+.mobile-quote {
+	display: flex;
+	padding-top: 25px;
+	width: 100%;
+}
+
+.mobile-quote p {
+	font-family: 'Nanum Pen Script', cursive;
+	text-align: center;
+	font-size: 1.5rem;
+	color: #060709;
+	padding: 20px;
+}
+
 .quote {
+	display: none;
 	max-width: 700px;
 }
 
 .quote p {
 	font-family: 'Nanum Pen Script', cursive;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: #060709;
 }
 
 .info {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
-	padding: 20px 20px 20px 20px;
+	padding: 0 20px 20px 20px;
 }
 
 section {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	align-items: center;
 	max-width: 300px;
+	padding-bottom: 20px;
 }
 
 section img {
@@ -341,7 +360,8 @@ section img {
 
 h2 {
 	font-family: 'Acme', sans-serif;
-	font-size: 2rem;
+	font-size: 1.5rem;
+	text-align: center;
 }
 
 section ul li {
@@ -352,7 +372,6 @@ section ul li {
 }
 
 article {
-	padding-top: 40px;
 	max-width: 700px;
 }
 
@@ -372,18 +391,17 @@ article p {
 
 /***** SLIDESHOW *****/
 
-.slideshow-position {
-	/* padding: 10px 0 0 275px; */
+
+.slideshow {
+	text-align: center;
+  margin-left: 205px;
 }
 
 .slidepic {
-  position: absolute;
-  top: 60%;
-  left: 50%;
   height: 200px;
   width: 200px;
-  margin-top: -110px;
-  margin-left: -105px;
+  margin-top: 30px;
+  margin-left: -210px; /* change in media queries */
   border: 5px solid #fff;
   border-bottom-width: 15px;
   -moz-box-shadow: 0 2px 5px rgba(30, 30, 30, 0.25);
@@ -478,6 +496,54 @@ article p {
 
 .slidepic.back { z-index: 1; }
 
+
+/* =======================================================
+
+					START 400PX MIN-WIDTH MEDIA QUERY
+
+========================================================*/
+
+@media (min-width: 400px) {
+	#regina-headline {
+		max-width: none;
+	}
+
+}
+
+
+/* =======================================================
+
+					START 450PX MIN-WIDTH MEDIA QUERY
+
+========================================================*/
+
+@media (min-width: 450px) {
+	h1 {
+		font-size: 3.5rem;
+		max-width: 450px;
+	}
+
+	#cady-headline {
+		max-width: 310px;
+	}
+
+	#regina-headline {
+		max-width: 350px;
+	}
+}
+
+/* =======================================================
+
+					START 500PX MIN-WIDTH MEDIA QUERY
+
+========================================================*/
+
+@media (min-width: 500px) {
+	#cady-headline {
+		max-width: none;
+	}
+}
+
 /* =======================================================
 
 					START 600PX MIN-WIDTH MEDIA QUERY
@@ -485,6 +551,18 @@ article p {
 ========================================================*/
 
 @media (min-width: 600px) {
+	#regina-headline {
+		max-width: none;
+	}
+}
+
+/* =======================================================
+
+					START 700PX MIN-WIDTH MEDIA QUERY
+
+========================================================*/
+
+@media (min-width: 700px) {
 	h1 {
 		font-size: 5rem;
 		max-width: none;
@@ -506,6 +584,25 @@ article p {
 		padding: 20px 20px 50px 0;
 	}
 
+	.mobile-quote {
+		display: none;
+	}
+
+	.quote {
+		display: block;
+	}
+
+	.quote p {
+		font-size: 2rem;
+	}
+
+	section {
+		padding-bottom: 0;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
 }
 
 
@@ -525,12 +622,16 @@ article p {
 		display: none;
 	}
 
-	#desktop-logo {
+	.desktop-logo {
 		display: block;
 	}
 
 	.desktop-nav {
 		display: block;
+	}
+
+	.info {
+		flex-direction: row;
 	}
 
 }
