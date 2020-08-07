@@ -8,6 +8,8 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
     display:block;
 }
 
+/***** GENERAL FORMAT *****/
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -46,6 +48,8 @@ h1 {
 		text-decoration-color: #dd2429;
 	}
 }
+
+/***** HEADER *****/
 
 header {
 	display: flex;
@@ -409,9 +413,9 @@ article p {
 }
 
 /***** SLIDESHOW *****/
+/* https://www.cssscript.com/demo/polaroid-like-stacked-image-slideshow/ */
 
 .slideshow {
-	/* text-align: center; */
   margin-left: 205px;
 }
 
